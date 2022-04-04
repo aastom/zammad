@@ -479,12 +479,8 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
-<<<<<<< HEAD
     rszr (1.2.1)
     rubocop (1.26.1)
-=======
-    rubocop (1.26.0)
->>>>>>> 814e2012d ([IMP] add static groups)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -689,10 +685,7 @@ DEPENDENCIES
   rchardet (>= 1.8.0)
   redis
   rspec-rails
-<<<<<<< HEAD
   rszr
-=======
->>>>>>> 814e2012d ([IMP] add static groups)
   rubocop
   rubocop-faker
   rubocop-inflector!
