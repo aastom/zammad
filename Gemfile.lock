@@ -321,7 +321,6 @@ GEM
     multi_json (1.15.0)
     multi_xml (0.6.0)
     multipart-post (2.1.1)
-    mysql2 (0.5.3)
     naught (1.1.0)
     nenv (0.3.0)
     nestful (1.1.4)
@@ -480,8 +479,12 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
+<<<<<<< HEAD
     rszr (1.2.1)
     rubocop (1.26.1)
+=======
+    rubocop (1.26.0)
+>>>>>>> 814e2012d ([IMP] add static groups)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -657,7 +660,6 @@ DEPENDENCIES
   messagebird-rest
   mime-types
   mini_racer (= 0.2.9)
-  mysql2
   net-ldap
   oauth2
   omniauth-facebook
@@ -687,7 +689,10 @@ DEPENDENCIES
   rchardet (>= 1.8.0)
   redis
   rspec-rails
+<<<<<<< HEAD
   rszr
+=======
+>>>>>>> 814e2012d ([IMP] add static groups)
   rubocop
   rubocop-faker
   rubocop-inflector!
