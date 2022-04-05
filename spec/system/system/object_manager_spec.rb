@@ -60,7 +60,7 @@ RSpec.describe 'System > Objects', type: :system do
   end
 
   context 'when creating and removing a field with migration', db_strategy: :reset do
-    RSpec.shared_examples 'create and remove field with migration' do |data_type|
+    shared_examples 'create and remove field with migration' do |data_type|
       context "for data_type '#{data_type}'" do
         before do
           visit '/#system/object_manager'
@@ -226,28 +226,23 @@ RSpec.describe 'System > Objects', type: :system do
 
         before do
           # use drag and drop to reverse sort the options
-          within '.modal form' do
-            within '.js-dataMap table.js-Table .table-sortable' do
-              rows = all('tr.input-data-row td.table-draggable')
-              target = rows.last
-              pos = rows.size - 1
-              rows.each do |row|
-                next if pos <= 0
+          in_modal do
+            wait.until_constant do
+              find('tbody.table-sortable')
+                .evaluate_script("$(this).sortable('instance').ready")
+            end
 
+            within '.js-dataMap table.js-Table .table-sortable' do
+              rows        = all('tr.input-data-row td.table-draggable .icon')
+              target      = rows.last
+              rows.each do |row|
                 row.drag_to target
-                pos -= 1
               end
             end
+
             click_button 'Submit'
           end
 
-          click '.js-execute', wait: 7.minutes
-          # expect(page).to have_text('please reload your browser')
-          click '.modal-content button.js-submit'
-
-          refresh
-
-          visit '/#system/object_manager'
           click 'tbody tr:last-child td:first-child'
         end
 
