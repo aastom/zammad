@@ -1,31 +1,131 @@
 <div class="horizontal flex">
   <div class="main no-padding flex">
-    <div class="newTicket">
-      <div class="box box--newTicket">
-        <div class="page-header">
-          <h1><%- @T('New Ticket') %></h1>
-        </div>
+	<div class="newTicket">
+	  <div class="box box--newTicket">
+		<div class="page-header">
+		  <h1><%- @T('New Ticket') %></h1>
+		</div>
 
-        <div class="page-content">
-          <form role="form" class="ticket-create" autocomplete="off">
-            <input type="hidden" name="form_id" value="<%= @form_id %>"/>
+		<div class="page-content">
+		  <form role="form" class="ticket-create" autocomplete="off">
+			<input type="hidden" name="form_id" value="<%= @form_id %>"/>
 
-            <div class="ticket-form-top"></div>
-            <div class="article-form-top"></div>
+			<div class="ticket-form-top"></div>
+			<div class="article-form-top"></div>
 
-            <div class="formset-inset">
-              <div class="ticket-form-middle horizontal two-columns"></div>
-              <div class="ticket-form-bottom"></div>
-            </div>
+			<div class="formset-inset">
+			  	<div class="horizontal two-columns">
+				  	<div class="form-group column">
+						<div class="formGroup-label">
+							<label for="Ticket_649227_group_id">Group <span>*</span></label>
+						</div>
+						<div class="controls ">
+							<div class="controls controls--select">
+								<select id="Ticket_649227_group_id" class="form-control" name="group_id" required="">
+									<option value="" selected="">-</option>
+									<option value="2">Communication</option>
+									<option value="3">Documentation</option>
+									<option value="4">ERP - Switchback</option>
+									<option value="5">ERP - Sage</option>
+									<option value="6">ERP - Captain Hooks</option>
+									<option value="7">ERP - Tema</option>
+									<option value="8">ERP - Atuabo</option>
+									<option value="9">Pentaho - Switchback</option>
+									<option value="10">Pentaho - Sage</option>
+									<option value="11">Pentaho - Captain Hooks</option>
+									<option value="12">Pentaho - Tema</option>
+									<option value="13">Pentaho - Atuabo</option>
+									<option value="14">Retail</option>
+									<option value="15">Data Center Operations</option>
+									<option value="16">Networking and Infrastructure</option>
+									<option value="17">General Support</option>
+								</select>
+								<svg class="icon icon-arrow-down ">
+									<use xlink:href="assets/images/icons.svg#icon-arrow-down"></use>
+								</svg>
+							</div>
+							<span class="help-inline"></span>
+							<span class="help-block">Kindly see below for details.</span>
+						</div>
+					</div>
+			  	</div>
+			  	<div class="ticket-form-bottom"></div>
+			</div>
 
-            <div class="form-controls">
-              <a class="btn btn--text btn--subtle js-cancel" href="#/"><%- @T('Cancel & Go Back') %></a>
-              <button type="submit" class="btn btn--success js-submit align-right"><%- @T('Create') %></button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
+			<div class="formset-inset">
+			  	<div class="horizontal three-columns">
+					<div class="form-group column">
+						<b> Communication</b>
+						<ul>
+							<li>Zimbra (Email)</li>
+							<li>Arch Meet</li>
+							<li>Rocket Chat</li>
+						</ul>
+						<b> Documentation</b>
+						<ul>
+							<li>Alfresco</li>
+							<li>LibreOffice</li>
+							<li>Arch Tracker</li>
+							<li>Own Cloud</li>
+						</ul>
+						<b> ERP</b>
+						<ul>
+							<li>Switchback</li>
+							<li>Sage</li>
+							<li>Captain Hooks</li>
+							<li>Tema</li>
+							<li>Atuabo</li>
+						</ul>
+					</div>
+			
+
+					<div class="form-group column">
+						<b> Pentaho</b>
+						<ul>
+							<li>Switchback</li>
+							<li>Sage</li>
+							<li>Captain Hooks</li>
+							<li>Tema</li>
+							<li>Atuabo</li>
+						</ul>
+						
+						<b> Retail</b>
+						<ul>
+							<li>Station Report </li>
+							<li>Station Discharge</li>
+							<li>Petty Cash</li>
+							<li>Genset </li>
+							<li>Fault Report App</li>
+							<li>Station Price Change</li>
+							<li>TM app</li>
+							<li>Stock Take app </li>
+						</ul>
+					</div>
+
+					<div class="form-group column">
+						<b> Data Center Operations</b>
+						<ul>
+							<li>Login issues </li>
+							<li>Challenges opening sites</li>
+						</ul>
+						<b>Networking and Infrastructure</b>
+						<ul>
+							<li>Internet connection issues</li>
+							<li>Phone issues </li>
+							<li>General hardware issues</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-controls">
+			  <a class="btn btn--text btn--subtle js-cancel" href="#/"><%- @T('Cancel & Go Back') %></a>
+			  <button type="submit" class="btn btn--success js-submit align-right"><%- @T('Create') %></button>
+			</div>
+		  </form>
+		</div>
+	  </div>
+	</div>
   </div>
 </div>
 
